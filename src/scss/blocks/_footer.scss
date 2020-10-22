@@ -1,0 +1,140 @@
+.footer {
+	min-height: 201px;
+	background-color: #25333c;
+	@media (max-width: 1200px) {
+		padding: 0 15px;
+	}
+	&__top {
+		padding-top: 24px;
+		display: flex;
+		@media (max-width: 576px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__info {
+		display: flex;
+		align-items: center;
+		@media (max-width: 576px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__img {
+		width: 68px;
+		height: 71px;
+		@media (max-width: 576px) {
+			margin-bottom: 5px;
+		}
+		img {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		margin-left: 43px;
+		color: #ffffff;
+		font-size: 16px;
+		font-weight: 700;
+		@media (max-width: 992px) {
+			font-size: 14px;
+			margin-left: 10px;
+		}
+		@media (max-width: 768px) {
+			font-size: 12px;
+		}
+	}
+
+	&__contacts {
+		margin: 0 20px 0 auto;
+
+		@media (max-width: 576px) {
+			margin: 0 auto;
+		}
+	}
+
+	&__question {
+		padding-top: 18px;
+		opacity: 0.7;
+		text-align: right;
+		color: #ffffff;
+		font-weight: 300;
+		@media (max-width: 992px) {
+			font-size: 13px;
+		}
+		@media (max-width: 768px) {
+			font-size: 12px;
+		}
+		@media (max-width: 576px) {
+			font-size: 11px;
+		}
+	}
+
+	&__phone {
+		display: block;
+		font-size: 19px;
+		font-weight: 700;
+		margin-top: 5px;
+		white-space: nowrap;
+		@media (max-width: 992px) {
+			font-size: 15px;
+		}
+		@media (max-width: 768px) {
+			font-size: 13px;
+		}
+		@media (max-width: 576px) {
+			font-size: 12px;
+		}
+	}
+	&__divider {
+		margin-top: 26px;
+		width: 100%;
+		height: 1px;
+		background: #667076;
+	}
+
+	&__bottom {
+		margin-top: 30px;
+		padding-bottom: 35px;
+		display: flex;
+		justify-content: space-between;
+		font-size: 13px;
+		font-weight: 300;
+		opacity: 0.6;
+		color: #ffffff;
+		a {
+			color: $main-color;
+		}
+		@media (max-width: 576px) {
+			flex-direction: column;
+			align-items: center;
+			font-size: 11px;
+		}
+	}
+
+	&__confidential {
+		opacity: 1;
+		text-decoration: underline;
+		&:hover {
+			opacity: 0.6;
+			text-decoration: underline;
+		}
+		@media (max-width: 576px) {
+			margin-top: 5px;
+		}
+	}
+
+	&__create {
+		display: flex;
+		@media (max-width: 576px) {
+			margin-top: 10px;
+		}
+	}
+
+	&__icon {
+		margin: -10px 0 0 10px;
+		@media (max-width: 576px) {
+			margin-top: -5px;
+		}
+	}
+}

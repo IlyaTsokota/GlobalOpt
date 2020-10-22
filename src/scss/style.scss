@@ -1,0 +1,34 @@
+@import "base/fonts";
+@import "base/variables";
+@import "base/nullstyle";
+@import "base/mixins";
+@import "base/animations";
+* {
+	font-family: $main-font;
+}
+
+.container {
+	position: relative;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+@import "blocks/promo";
+@import "blocks/header";
+@import "blocks/buttons";
+@import "blocks/title";
+@import "blocks/footer";
+@import "blocks/benefits";
+@import "blocks/divider";
+@import "blocks/subtitle";
+@import "blocks/ourwork";
+@import "blocks/info";
+@import "blocks/prices";
+@import "blocks/circle";
+@import "blocks/consultation";
+@import "blocks/forms";
+@import "blocks/scheme";
+@import "blocks/swiper";
+@import "blocks/reviews";
+@import "blocks/question";
+@import "blocks/map";

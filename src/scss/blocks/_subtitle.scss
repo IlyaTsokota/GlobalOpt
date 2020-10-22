@@ -1,0 +1,14 @@
+.subtitle {
+	margin: 15px 10.7% 0;
+	color: #2e2e2e;
+	font-size: 21px;
+	font-weight: 300;
+	line-height: 24px;
+	text-align: center;
+	@media (max-width: 768px) {
+		font-size: 18px;
+	}
+	@media (max-width: 576px) {
+		font-size: 13px;
+	}
+}
