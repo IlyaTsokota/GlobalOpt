@@ -6,7 +6,9 @@
 * {
 	font-family: $main-font;
 }
-
+html {
+	scroll-behavior: smooth;
+}
 .container {
 	position: relative;
 	max-width: 1140px;
@@ -32,3 +34,4 @@
 @import "blocks/reviews";
 @import "blocks/question";
 @import "blocks/map";
+@import "blocks/up";

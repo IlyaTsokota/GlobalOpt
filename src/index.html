@@ -29,19 +29,19 @@
 
 <body>
 	<div class="wrapper">
-		<section class="promo">
+		<section class="promo" id="top">
 			<div class="container">
 				<header class="header">
 					<a href="#" class="header__logo"><img src="img/logo.png" alt="Global Opt" /></a>
 					<div class="header__menu">
 						<nav class="header__nav">
 							<ul class="header__list">
-								<li class="header__item"><a href="#">Преимущества</a></li>
-								<li class="header__item"><a href="#">Наша работа</a></li>
-								<li class="header__item"><a href="#">Цены</a></li>
-								<li class="header__item"><a href="#">Схема работы</a></li>
-								<li class="header__item"><a href="#">Отзывы</a></li>
-								<li class="header__item"><a href="#">Контакты</a></li>
+								<li class="header__item"><a href="#benefits">Преимущества</a></li>
+								<li class="header__item"><a href="#our-work">Наша работа</a></li>
+								<li class="header__item"><a href="#prices">Цены</a></li>
+								<li class="header__item"><a href="#scheme">Схема работы</a></li>
+								<li class="header__item"><a href="#reviews">Отзывы</a></li>
+								<li class="header__item"><a href="#map">Контакты</a></li>
 							</ul>
 						</nav>
 						<div class="header__contacts" id="small_screen_contacts">
@@ -57,7 +57,7 @@
 						<div class="header__question">Есть вопросы?</div>
 						<a href="tel:+79264230100" class="header__phone">+7 (926) 423 01 00</a>
 					</div>
-					<a href="#" class="button">Перезвоните мне</a>
+					<a href="#call" class="button">Перезвоните мне</a>
 					<div class="header__burger">
 						<span></span>
 						<span></span>
@@ -96,11 +96,11 @@
 					</div>
 				</div>
 				<div class="promo__btn">
-					<a href="#" class="button button--main">Получить расчет</a>
+					<a href="#payment" class="button button--main">Получить расчет</a>
 				</div>
 			</div>
 		</section>
-		<section class="benefits">
+		<section class="benefits" id="benefits">
 			<div class="container">
 				<h2 class="title">Преимущества работы с GlobalOpt</h2>
 				<div class="benefits__items">
@@ -191,7 +191,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="ourwork">
+		<section class="ourwork" id="our-work">
 			<div class="container">
 				<h2 class="title">Наша работа - больше чем просто доставка</h2>
 				<div class="divider"></div>
@@ -241,7 +241,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="prices">
+		<section class="prices" id="prices">
 			<div class="container">
 				<h2 class="title">Цены на любой вариант доставки</h2>
 				<div class="divider"></div>
@@ -312,7 +312,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="consultation">
+		<section class="consultation" id="call">
 			<div class="container">
 				<h3 class="consultation__title">Заказать бесплатную консультацию</h3>
 				<div class="consultation__body">
@@ -322,7 +322,7 @@
 					<form action="#" id="form-feed--first" class="form-feed">
 						<input type="text" name="name" placeholder="Ваше имя..." class="_req" />
 						<input type="text" name="phone" placeholder="Ваш номер телефона..." class="_req _phone" />
-						<input type="email" name="email" placeholder="Ваше e-mail..." class="_req _email" />
+						<input type="email" name="email" placeholder="Ваш e-mail..." class="_req _email" />
 						<button class="button button--submit" id="first-submit">Отправить заявку</button>
 					</form>
 				</div>
@@ -338,7 +338,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="scheme">
+		<section class="scheme" id="scheme">
 			<div class="container">
 				<h2 class="title">Схема работы с нами</h2>
 				<div class="scheme__items">
@@ -385,7 +385,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="reviews">
+		<section class="reviews" id="reviews">
 			<h2 class="title">отзывы наших клиентов</h2>
 			<div class="divider"></div>
 			<h3 class="subtitle">Мы всегда стараемся помочь клиентам, что бы они обращались к нам снова</h3>
@@ -436,7 +436,7 @@
 				<button type="button" class="swiper-next"><img src="icons/arrow.svg" alt="next" /></button>
 			</div>
 		</section>
-		<section class="question">
+		<section class="question" id="payment">
 			<div class="question__container">
 				<div class="question__header">
 					<div class="question__title">Остались вопросы?</div>
@@ -446,14 +446,14 @@
 					<form action="#" class="form-feed" id="form-question">
 						<input type="text" name="name" placeholder="Ваше имя..." class="_req" />
 						<input type="text" name="phone" placeholder="Ваш номер телефона..." class="_req _phone" />
-						<input type="email" name="email" placeholder="Ваше e-mail..." class="_req _email" />
+						<input type="email" name="email" placeholder="Ваш e-mail..." class="_req _email" />
 						<textarea name="message" placeholder="Сообщение..."></textarea>
 						<button class="button button--submit">Отправить заявку</button>
 					</form>
 				</div>
 			</div>
 		</section>
-		<div class="map">
+		<div class="map" id="map">
 			<iframe class="map__google"
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.6063717386323!2d37.625029316214246!3d55.74796799983189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54af8f4b2bb81%3A0x796b6bb427f2184b!2z0KHQsNC00L7QstC90LjRh9C10YHQutCw0Y8g0YPQuy4sIDUsINC-0YTQuNGBIDQtNiwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDExNTAzNQ!5e0!3m2!1sru!2sua!4v1603258624817!5m2!1sru!2sua"
 				allowfullscreen="" aria-hidden="false">
@@ -470,7 +470,7 @@
 						<div class="footer__question">Есть вопросы?</div>
 						<a href="tel:+79264230100" class="footer__phone">+7 (926) 423 01 00</a>
 					</div>
-					<a href="#" class="button button--last">Перезвоните мне</a>
+					<a href="#call" class="button button--last">Перезвоните мне</a>
 				</div>
 				<div class="footer__divider"></div>
 				<div class="footer__bottom">
@@ -483,6 +483,7 @@
 				</div>
 			</div>
 		</footer>
+		<a href="#top" class="up"><img src="icons/up.svg" alt="up"></ф>
 	</div>
 </body>
 

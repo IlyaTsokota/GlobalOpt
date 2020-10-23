@@ -1,4 +1,5 @@
 'use strict';
+
 const menu = document.querySelector('.header__menu'),
 	burger = document.querySelector('.header__burger'),
 	closeMenu = document.querySelector('.header__close'),
@@ -135,11 +136,17 @@ function emailTest(input) {
 
 function maskPhones() {
 	const maskOptions = {
-		mask: '+{7}(000)000-00-00'
+		mask: '+{7}(000)000-00-00',
+		placeholderChar: '_'
 	};
 	const inputPhones = document.querySelectorAll("._phone");
 	inputPhones.forEach(item => {
-		IMask(item, maskOptions);
+		const patternMask = IMask(item, maskOptions);
+		item.addEventListener('blur', function () {
+			if (patternMask.unmaskedValue.length != 11 && patternMask.unmaskedValue.length != 1) {
+				patternMask.value = '';
+			}
+		}, true);
 	});
 
 }
@@ -147,5 +154,47 @@ function maskPhones() {
 function clearInputs() {
 	document.querySelectorAll('input').forEach(i => i.value = '');
 }
+
 maskPhones();
 clearInputs();
+
+window.onscroll = function () {
+	scrollFunction();
+};
+
+function scrollFunction() {
+	const up = document.querySelector('.up');
+	if (document.body.scrollTop > 1600 || document.documentElement.scrollTop > 1600) {
+		up.classList.add('up--active');
+	} else {
+		up.classList.remove('up--active');
+	}
+}
+
+function scrollToBlock() {
+	let linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
+		speed = 0.3; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+	for (let i = 0; i < linkNav.length; i++) {
+		linkNav[i].addEventListener('click', (e) => { //по клику на ссылку
+			e.preventDefault(); //отменяем стандартное поведение
+			let yOffset = window.pageYOffset, // производим прокрутка прокрутка
+				id = e.target.href.replace(/[^#]*(.*)/, '$1'), // к id элемента, к которому нужно перейти
+				topOffset = document.querySelector(id).getBoundingClientRect().top, // отступ от окна браузера до id
+				start = null;
+			requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
+			function step(time) {
+				if (start === null) {
+					start = time;
+				}
+				let progress = time - start,
+					r = topOffset < 0 ? Math.max((yOffset - progress / speed), (yOffset + topOffset)) :
+					Math.min((yOffset + progress / speed), (yOffset + topOffset));
+				window.scrollTo(0, r);
+				if (r != yOffset + topOffset) {
+					requestAnimationFrame(step);
+				}
+			}
+		}, false);
+	}
+}
+scrollToBlock();
