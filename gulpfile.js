@@ -61,6 +61,7 @@ gulp.task('fonts', () => {
 
 gulp.task('icons', () => {
 	return gulp.src("src/icons/**/*")
+		.pipe(imagemin())
 		.pipe(gulp.dest('dist/icons'));
 });
 
@@ -75,4 +76,5 @@ gulp.task('images', () => {
 		.pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'mailer', 'images', 'html'));
+gulp.task('default',
+	gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'mailer', 'images', 'html'));
